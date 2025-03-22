@@ -30,5 +30,5 @@ class SnakeUser(AbstractUser):
 
     class Meta:
         ordering = ('username',)
-        verbose_name = 'Игрок'
-        verbose_name_plural = 'Игроки'
+        verbose_name = 'Player'
+        verbose_name_plural = 'Players'
