@@ -52,7 +52,6 @@ venv.bak/
 
 .mypy_cache
 
-# Statics and media
+# Media
 media/
 sent_emails/
-static/
