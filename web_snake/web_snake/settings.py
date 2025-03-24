@@ -139,3 +139,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Setting custom user model:
 AUTH_USER_MODEL = 'users.SnakeUser'
+
+CSRF_FAILURE_VIEW = 'pages.views.csrf_failure'
