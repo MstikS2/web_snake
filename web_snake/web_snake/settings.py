@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
+    'rest_framework',
+    'api.apps.ApiConfig',
     'pages.apps.PagesConfig',
     'rating.apps.RatingConfig',
     'users.apps.UsersConfig',
