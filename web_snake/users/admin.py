@@ -1,15 +1,15 @@
 from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
-from .models import SnakeUser
 
-# Добавляем поле с биографией
-# к стандартному набору полей (fieldsets) пользователя в админке.
-# UserAdmin.fieldsets += (
-#    # Добавляем кортеж, где первый элемент — это название раздела в админке,
-#    # а второй элемент — словарь, где под ключом fields можно указать нужные поля.
-#     ('Extra Fields', {'fields': ('bio',)}),
-# )
+User = get_user_model()
 
-# Регистрируем модель в админке:
-admin.site.register(SnakeUser, UserAdmin)
+# include_parents=False does not work for SnakeUser model cause
+# User fields are considered as local, not parent.
+# So we need to slice the list manually:
+extra_fields = [field.name for field in User._meta.get_fields()][12:-2]
+
+UserAdmin.fieldsets += (('Extra Fields', {'fields': extra_fields}),)
+
+admin.site.register(User, UserAdmin)
