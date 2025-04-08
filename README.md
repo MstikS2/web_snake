@@ -6,7 +6,7 @@
 This is the website with rating for [the snake](https://github.com/MstikS2/the_snake) game!\
 Available on *[not available yet, actually]*
 
-Developed using Python 3.9.13 with Django 4.2.20 and Bootstrap frameworks.
+Developed using Python 3.9.13 with Django 4.2.20, DRF and Bootstrap frameworks.
 
 ---
 
